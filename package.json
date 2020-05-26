@@ -2,6 +2,11 @@
   "name": "rtk-create-selector-creator",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "prebuild": "rm -rf lib",
+    "build": " NODE_ENV=production rollup -c",
+    "lint": "eslint ./ --ext ts --ext ts"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -21,6 +26,7 @@
     "@babel/core": "7.9.6",
     "@babel/plugin-transform-runtime": "7.9.6",
     "@babel/preset-env": "7.9.6",
+    "@babel/preset-typescript": "^7.9.0",
     "@rollup/plugin-babel": "5.0.0",
     "@rollup/plugin-commonjs": "11.1.0",
     "@rollup/plugin-node-resolve": "7.1.3",
@@ -34,7 +40,8 @@
     "rollup": "2.10.0",
     "rollup-plugin-peer-deps-external": "2.2.2",
     "rollup-plugin-typescript2": "0.27.1",
-    "typescript": "3.9.3"
+    "typescript": "3.9.3",
+    "typescript-transform-paths": "^1.1.14"
   },
   "dependencies": {
     "ttypescript": "^1.5.10"
