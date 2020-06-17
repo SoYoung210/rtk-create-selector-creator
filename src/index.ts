@@ -1,5 +1,4 @@
-import { CombinedState, Reducer } from 'redux';
-
+import { createSelector } from 'redux-toolkit';
 // interface SelectorCreator<
 //   State = ReturnType<Reducer<CombinedState<any>>>,
 //   Name extends string = string
@@ -11,8 +10,11 @@ import { CombinedState, Reducer } from 'redux';
 // https://github.com/reduxjs/redux-toolkit/issues/536
 const createSelectorCreator = (
   name: string,
-) => (state: ReturnType<Reducer<CombinedState<any>>>) => {
-  return state[name];
+) => {
+  return (fn: (params?: any) => any) => createSelector(
+    [(state: any) => state[name]],
+    fn,
+  );
 };
 
 export default createSelectorCreator;
