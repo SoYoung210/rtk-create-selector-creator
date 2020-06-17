@@ -44,6 +44,7 @@
     "typescript-transform-paths": "^1.1.14"
   },
   "dependencies": {
+    "redux-toolkit": "^1.1.2",
     "ttypescript": "^1.5.10"
   }
 }
