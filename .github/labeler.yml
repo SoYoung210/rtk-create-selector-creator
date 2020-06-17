@@ -1,0 +1,8 @@
+🐧 Actions:
+  - .github/workflows/**/*
+
+🦅 Feature:
+  - src/**/*
+
+🌈 Test:
+  - src/__tests__/**/*
