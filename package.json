@@ -2,6 +2,7 @@
   "name": "@soyoung210/rtk-create-selector-creator",
   "version": "0.0.1",
   "private": true,
+  "main": "lib/index.js",
   "scripts": {
     "prebuild": "rm -rf lib",
     "build": " NODE_ENV=production rollup -c",
